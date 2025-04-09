@@ -8,7 +8,10 @@
     font-style: normal;
     font-variation-settings: "slnt" 0;
 }
-
+html,body{
+    overflow: hidden;
+    overscroll-behavior-y: contain;
+}
 .overskrift {
     color: red;
 }
