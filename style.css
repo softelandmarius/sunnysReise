@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap');
+
+* {
+    font-family: "Gluten", cursive;
+    font-optical-sizing: auto;
+    font-size: 2em;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+.overskrift {
+    color: red;
+}
+
+.overskrift2 {
+    color: greenyellow;
+}
+
+.utfordring {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.tekstVenstre {
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+}
