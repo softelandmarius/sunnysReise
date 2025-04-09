@@ -23,7 +23,8 @@ const Start = (maal) => {
 const breddeIpad = 1080;
 const høydeIpad = 810;
 //Start(strandBaat1);
-Start(sunnyRegelStjerne)
+Start(danseParty);
+
 // Disse scenene er her som eksempler. Du kan ta dem bort eller endre dem. 
 
 
@@ -49,6 +50,8 @@ function rimPaaTang() {
    const tekst =  new Blocks.Text("Hjelp meg å rime på Tang!", { style: "tekstVenstre", x: 100, y: 300, width: 1000, height: 150 })
    const pil = new Blocks.Image("bilder/pil_hoyre.png", { x:950, y:650, width: 50, height:100})
    const krabbenhermann = new Blocks.Image("bilder/krabbe_2.png", {x:60, y:500, width:300, height:300});
+   const rime = new Blocks.Sound("lyd/scene15.m4a", {loop: false, auto: true})
+
    //new Blocks.Sound
 
     Actions.Click(pil, ()=>{
@@ -62,6 +65,8 @@ function finnToLike() {
     const tekst = new Blocks.Text("Finn to like!", { style: "tekstVenstre", x: breddeIpad/4, y: 300, width: 1000, height: 150 })
     const pil = new Blocks.Image ("bilder/pil_hoyre.png", { x:950, y:650, width:50, height:100 })
     ;
+    const lyd16 = new Blocks.Sound("lyd/scene16.m4a", {loop: false, auto: true})
+
     Actions.Click(pil, ()=>{
         GaaTil(finnToLike2)
         
@@ -203,7 +208,9 @@ function rimMaake() {
     const bakgrunnsfarge =new Blocks. Image("bilder/blaa_bakgrunn.jpeg", { x: 0, y: 0, width: breddeIpad, height: høydeIpad})
     const tekst = new Blocks. Text("Hjelp meg å rime på Måke!", { style: "tekstVenstre", x: 100, y: 300, width: 1000, height: 150})
     const pil = new Blocks. Image("bilder/pil_hoyre.png", { x:950, y:650, width:50, height:100})
-    const maake = new Blocks.Image("bilder/herr_maake.png", {x:60, y:500, width:300, height:300});
+    const maake = new Blocks.Image("bilder/herr_maake.png", {x:60, y:500, width:300, height:300})
+    const lyd18 = new Blocks.Sound("lyd/scene18.m4a", {loop: false, auto: true})
+;
     Actions.Click(pil, ()=>{
         GaaTil(Velkommen)
     })
@@ -211,7 +218,9 @@ function rimMaake() {
 function fargeleggFisk() {
     const bakgrunnsfarge = new Blocks. Image("bilder/blaa_bakgrunn.jpeg", {x:0, y:0, width:breddeIpad, height:høydeIpad})
     const tekst = new Blocks.Text("Kan dere fargelegge denne fisken?", { style: "tekstVenstre", x: 50, y: 300, width: 1000, height: 150})
-    const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100});
+    const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100})
+    const lyd19 = new Blocks.Sound("lyd/scene19.m4a", {loop: false, auto: true})
+;
     Actions.Click(pil, ()=>{
         GaaTil(fargeleggFisk2)
     })
@@ -228,7 +237,9 @@ function fargeleggFisk2 () {
 function fargeleggCora() {
     const bakgrunnsfarge = new Blocks.Image("bilder/blaa_bakgrunn.jpeg", {x:0, y:0, width: breddeIpad, height:høydeIpad})
     const tekst = new Blocks. Text("Gi meg farge!", { style: "tekstVenstre", x: breddeIpad/4, y: 300, width: 1000, height: 150,})
-    const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100});
+    const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100})
+    const lyd21 = new Blocks.Sound("lyd/scene21.m4a", {loop: false, auto: true})
+;
     Actions.Click(pil, ()=>{
         GaaTil(coraRegler)
     })
@@ -247,7 +258,8 @@ function hvilkenFargeBlir () {
     const bakgrunnsfarge = new Blocks.Image("bilder/blaa_bakgrunn.jpeg", {x:0, y:0, width: breddeIpad, height:høydeIpad})
     const tekst = new Blocks. Text("Hvilken farge blir disse?", { style: "tekstVenstre", x: 100, y: 300, width: 1000, height: 150,})
     const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100})
-    ;
+    const lyd23 = new Blocks.Sound("lyd/scene23.m4a", {loop: false, auto: true})
+ ;
     Actions.Click(pil, ()=>{
         GaaTil(hvilkenFarge2)
     })
@@ -327,7 +339,9 @@ function havetsLyd () {
 function hvorLeverDyrene () {
     const bakgrunnsfarge = new Blocks.Image("bilder/blaa_bakgrunn.jpeg", {x:0, y:0, width: breddeIpad, height:høydeIpad})
     const tekst = new Blocks. Text("Hvor lever dyrene?", { style: "tekstVenstre", x: 200, y: 300, width: 1000, height: 150,})
-    const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100});
+    const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100})
+    const lyd25 = new Blocks.Sound("lyd/scene25.m4a", {loop: false, auto: true})
+;
     Actions.Click(pil, ()=>{
         GaaTil(leverDyrene2)
     })
@@ -451,7 +465,8 @@ function hjelpSvomme () {
     const bakgrunnsbilde = new Blocks.Image("bilder/maltrom.jpeg", {x:0, y:0, width: breddeIpad, height:høydeIpad})
     const tekst = new Blocks. Text("Hjelp meg å svømme ut!", { style: "tekstVenstre", x: 100, y: 125, width: 1000, height: 150,})
     const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100})
-    const sunny = new Blocks.Image("bilder/sunny_hoyre.png", {x:100, y:450, width:300, height:350});
+    const sunny = new Blocks.Image("bilder/sunny_hoyre.png", {x:100, y:450, width:300, height:350})
+    const lyd27 = new Blocks.Sound("lyd/scene27.m4a", {loop: false, auto: true});
     Actions.Click(pil, ()=>{
         GaaTil(Velkommen)
     })
@@ -459,7 +474,8 @@ function hjelpSvomme () {
 function beskjedHjelp () {
     const bakgrunnsfarge = new Blocks.Image("bilder/blaa_bakgrunn.jpeg", {x:0, y:0, width: breddeIpad, height:høydeIpad})
     const tekst = new Blocks. Text("Hjelp å pusle!", { style: "tekstVenstre", x: breddeIpad/4, y: 300, width: 1000, height: 150,})
-    const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100});
+    const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100})
+    const lyd4 = new Blocks.Sound("lyd/scene4.m4a", {loop: false, auto: true});
     Actions.Click(pil, ()=>{
         GaaTil(pusleStart)
     })
@@ -473,7 +489,8 @@ function valgKarakter () {
     const rokke_karakter  = new Blocks.Image("bilder/rokke_karakter.png", { x: 250, y: 15, width: 200, height: 250})
     const sjohest_karakter  = new Blocks.Image("bilder/sjohest_karakter.png", { x: 500, y: 15, width: 200, height: 250})
     const sjostejerne_karakter  = new Blocks.Image("bilder/sjostjerne_karakter.png", {x: 800, y: 15, width: 200, height: 250})
-    const pil_hoyre  = new Blocks.Image("bilder/pil_hoyre.png", { x: 950, y: 650, width: 50, height:100 });
+    const pil_hoyre  = new Blocks.Image("bilder/pil_hoyre.png", { x: 950, y: 650, width: 50, height:100 })
+    const lyd11 = new Blocks.Sound("lyd/scene11.m4a", {loop: false, auto: true});
 
     Actions.Click(pil_hoyre, ()=>{
         GaaTil(Velkommen)
@@ -499,7 +516,8 @@ function tarDuUtfordring () {
     const bakgrunnsfarge = new Blocks.Image ("bilder/blaa_bakgrunn.jpeg", { x:0, y:0, width:1080, height:810})
     const tekst = new Blocks. Text("Tar du utfordringen?", { style: "tekstVenstre", x: breddeIpad/4, y: 300, width: 1000, height: 150,})
     const ja_valg = new Blocks.Image ("bilder/ja_valg.png", { x:10, y:550, width:180, height:180})
-    const nei_valg = new Blocks. Image ("bilder/nei_valg.png", { x:800, y: 550, width:180, height:180});
+    const nei_valg = new Blocks. Image ("bilder/nei_valg.png", { x:800, y: 550, width:180, height:180})
+    const lyd13 = new Blocks.Sound("lyd/scene13.m4a", {loop: false, auto: true});
     Actions.Click(nei_valg, ()=>{
         GaaTil(Velkommen)
  })
@@ -515,7 +533,8 @@ function tarDuUtfordring () {
 }
 function sunnyTvil () {
     const bakgrunn = new Blocks.Image("bilder/blaa_bakgrunn.jpeg", { x: 0, y: 0, width: 1080, height: 810})
-    const sunny_hoyre = new Blocks.Image("bilder/sunny_hoyre.png", { x: 0, y: 0, width: 450, height: 400 });
+    const sunny_hoyre = new Blocks.Image("bilder/sunny_hoyre.png", { x: 0, y: 0, width: 450, height: 400 })
+    const lyd38 = new Blocks.Sound("lyd/scene38.m4a", {loop: false, auto: true});
     Actions.Click(sunny_hoyre, ()=>{
         GaaTil(skilpaddeBobble)
     })
@@ -523,7 +542,8 @@ function sunnyTvil () {
 function sunnyReglerBeseire () {
     const bakgrunn = new Blocks.Image("bilder/blaa_bakgrunn.jpeg", { x: 0, y: 0, width: 1080, height: 810})
     const sunny_venstre = new Blocks.Image("bilder/sunny_venstre.png", { x: 0, y: 0, width: 450, height: 400 })
-    const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100});
+    const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100})
+    const lyd = new Blocks.Sound("lyd/scene25.m4a", {loop: false, auto: true});
     Actions.Click(pil, ()=>{
         GaaTil(sunnyBeseire)
     })
@@ -539,7 +559,10 @@ function slutt () {
     const karabbe_karakter  = new Blocks.Image("bilder/krabbe_karakter.png", { x: 10, y: 15, width: 200, height: 250})
     const rokke_karakter  = new Blocks.Image("bilder/rokke_karakter.png", { x: 250, y: 15, width: 200, height: 250})
     const sjohest_karakter  = new Blocks.Image("bilder/sjohest_karakter.png", { x: 500, y: 15, width: 200, height: 250})
-    const sjostejerne_karakter  = new Blocks.Image("bilder/sjostjerne_karakter.png", { x: 800, y: 15, width: 200, height: 250});
+    const sjostejerne_karakter  = new Blocks.Image("bilder/sjostjerne_karakter.png", { x: 800, y: 15, width: 200, height: 250})
+    
+    const lyder = new Blocks.SoundQue(["lyd/scene43.1.m4a","lyd/scene43.2.m4a"])
+    lyder.start();
 
     Actions.Click(sunny_hoyre, ()=>{
         resettUtfordringer();
@@ -550,7 +573,8 @@ function siSaaMangeDuKan (){
     const bakgrunn = new Blocks.Image("bilder/blaa_bakgrunn.jpeg", { x: 0, y: 0, width: 1080, height: 810})
     const sunny_venstre = new Blocks.Image("bilder/sunny_hoyre.png", { x: 0, y: 0, width: 350, height: 300 })
     const tekst = new Blocks.Text("Si så mange dyr du kan som bor i havet!", {style: "tekstVenstre", x:0, y: 300, width:1000, height:150})
-    const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100});
+    const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100})
+    const lyd40 = new Blocks.Sound("lyd/scene40.m4a", {loop: false, auto: true});
     Actions.Click(pil, ()=>{
         GaaTil(Velkommen)
     })
@@ -559,7 +583,7 @@ function siSaaMangeDuKan (){
 function tentakulusSnakker (){
     const bakgrunn = new Blocks.Image ("bilder/blaa_bakgrunn.jpeg", { x:0, y:0, width:breddeIpad, height:høydeIpad})
     const tentakulus = new Blocks.Image("bilder/tentakulus_med_mynter.png", {x:100, y:10, width:900, height:700})
-    ;
+    const lyd41 = new Blocks.Sound("lyd/scene41.m4a", {loop: false, auto: true});;
     Actions.Click(tentakulus, ()=>{
         GaaTil(sunnyReglerBeseire)
     })
@@ -567,7 +591,8 @@ function tentakulusSnakker (){
 function sunnyBeseire (){
     const bakgrunn = new Blocks.Image ("bilder/blaa_bakgrunn.jpeg", { x: 0, y:0, width: breddeIpad, height:høydeIpad})
     const sunny = new Blocks.Image("bilder/sunny_hoyre.png", {x:100, y:30, width:800, height:700})
-    ;
+    const lyder = new Blocks.SoundQue(["lyd/scene42.1.m4a","lyd/scene42.2.m4a","lyd/scene42.3.m4a"])
+    lyder.start();
     Actions.Click(sunny, ()=>{
         GaaTil(slutt)
     })
@@ -607,7 +632,8 @@ function createPuzzle (){
 }
 function pusleStart (){
    const bakgrunn = new Blocks.Image ("bilder/blaa_bakgrunn.jpeg", {x: 0, y:0, width:breddeIpad, height: høydeIpad})
-   const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100});
+   const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100})
+   const lyd5 = new Blocks.Sound("lyd/scene5.m4a", {loop: false, auto: true});
    Actions.Click(pil, ()=>{
     GaaTil(pusleLive)
    })
@@ -622,7 +648,7 @@ function pusleStart (){
 function pusleLive (){
     const bakgrunn = new Blocks.Image ("bilder/blaa_bakgrunn.jpeg", {x: 0, y:0, width:breddeIpad, height: høydeIpad})
     const sunny = new Blocks.Image("bilder/sunny_hoyre.png", {x:250, y:100, width:500, height:600});
-
+    const lyd6 = new Blocks.Sound("lyd/scene6.m4a", {loop: false, auto: true});
     Actions.Click(sunny, ()=>{
         GaaTil(reddeSjorovere)
     })
@@ -632,7 +658,7 @@ function pusleLive (){
 
 function danseParty() {
     
-   const bakgrunn = new Blocks.Image("bilder/blaabakgrunn2.png", { x: 0, y: 0, width: 885, height: 812})
+   const bakgrunn = new Blocks.Image("bilder/blaabakgrunn2.png", { x: 0, y: 0, width: breddeIpad, height: høydeIpad})
    const bilde1 = new Blocks.Image("bilder/hai.png", { x: 250, y: 15, width: 200, height: 250 })    
    const bilde2 = new Blocks.Image("bilder/sunny.png", { x: 300, y: 550, width: 200, height: 250})
    const bilde3 = new Blocks.Image("bilder/krabbe.png", { x: 500, y: 15, width: 200, height: 250})
@@ -640,9 +666,12 @@ function danseParty() {
    const tekst = new Blocks.Text("Danseparty!", { style: "utfordring", x: 150, y: 250, width: 30, height: 200,});
    const bilde5 = new Blocks.Image("bilder/pilTrykk.png", { x: 950, y: 650, width: 50, height: 100})
    const lyd1 = new Blocks.Sound("lyd/scene28.m4a", {loop: false, auto: true});
+   const dans = new Blocks.Sound("lyd/danse_party.mp3", {loop: false, auto: true});
 
 
    Actions.Click(bilde5, () => {
+    lyd1.stop();
+    dans.stop();
      GaaTil(Velkommen);
     })
 
@@ -661,6 +690,7 @@ function dykkerFisk () {
     const bilde8 = new Blocks.Image("bilder/bilde8fisk.png", { x: 350, y: 100, width: 450, height: 450})
     const bilde9 = new Blocks.Image("bilder/bilde9fisk.png", { x: 350, y: 420, width: 450, height: 450})
     const bilde10 = new Blocks.Image("bilder/pilTrykk.png", { x: 950, y: 650, width: 50, height: 100})
+    const lyd29 = new Blocks.Sound("lyd/scene29.m4a", {loop: false, auto: true});
 
     //const lyder = new Blocks.SoundQue(["lyd/Scene 29.m4a","lyd/Scene 29.m4a2.m4a","lyd/Scene 29.m4a3.m4a","lyd/Scene 29.m4a4.m4a"])
 
@@ -686,6 +716,7 @@ function dykkerFisk () {
         bilde9.hide();
     })
     Actions.Click(bilde10, () => {
+        lyd29.stop();
         GaaTil(Velkommen);
     })
 
@@ -697,7 +728,7 @@ function strandBaat1 () {
     const bilde1 = new Blocks.Image("bilder/strandBaat1.png", { x: 0, y: 0, width:breddeIpad, height: høydeIpad})
     
     const lyd1 = new Blocks.Sound("lyd/scene1.mp3", {loop: false, auto: true})
-    const lyd2 = new Blocks.Sound("lyd/bølgeStrand.mp3", {loop: false, auto: true})
+    //const lyd2 = new Blocks.Sound("lyd/bølgeStrand.mp3", {loop: false, auto: true})
     const lyd3 = new Blocks.Sound("lyd/maakeSkrik.mp3", {loop: false, auto: true})
 
     Actions.Click(bilde1, () => {
@@ -711,7 +742,7 @@ function strandBaat1 () {
 
 function baatHav () {
     const bilde1 = new Blocks.Image("bilder/baatHav.jpg", { x: 0, y: 0, width: breddeIpad, height: høydeIpad})
-    const lyd1 = new Blocks.Sound("lyd/bølgeHav.mp3", {loop: false, auto: true})
+    //const lyd1 = new Blocks.Sound("lyd/bølgeHav.mp3", {loop: false, auto: true})
     const lyd2 = new Blocks.Sound("lyd/scene2.m4a", {loop: false, auto: true})
 
     Actions.Click(bilde1, () => {
@@ -821,7 +852,7 @@ function dansepartyGrønn () {
 
 function zippiHjelp1 () {
     const bilde1 = new Blocks.Image("bilder/blaabakgrunn2.png", { x: 0, y: 0, width: breddeIpad, height: høydeIpad})
-    const bilde2 = new Blocks.Image("bilder/reke.png", { x: 650, y: 15, width: 200, height: 250})
+    const bilde2 = new Blocks.Image("bilder/reke.png", { x: 800, y: 15, width: 150, height: 150})
     const bilde3 = new Blocks.Image("bilder/pilTrykk.png", { x: 950, y: 650, width: 50, height: 100})
     const bilde4 = new Blocks.Image("bilder/eremittkreps2.png", { x: 10, y: 350, width: 200, height: 200})
     const bilde5 = new Blocks.Image("bilder/koraller.png", { x: 200, y: 350, width: 200, height: 200})
@@ -857,11 +888,11 @@ function zippiHjelp2 () {
     const check1 = new Blocks.Image("bilder/grønncheck.png", { x: 15, y: 220, width: 200, height: 200})
     check1.hide()
     const check2 = new Blocks.Image("bilder/grønncheck.png", { x: 300, y: 250, width: 200, height: 200})
-    check1.hide()
+    check2.hide()
     const check3 = new Blocks.Image("bilder/grønncheck.png", { x: 600, y: 250, width: 200, height: 200})
-    check1.hide()
+    check3.hide()
     const check4 = new Blocks.Image("bilder/grønncheck.png", { x: 10, y: 500, width: 200, height: 200})
-    check1.hide()
+    check4.hide()
 
     let teller= 0;
     function sjekk() {
@@ -878,29 +909,27 @@ function zippiHjelp2 () {
     Actions.Click(bilde5, () => {
         lyd1.stop();
         GaaTil(Velkommen);
-    
-        Actions.Click(bilde7, ()=>{
-            check1.show();
-            teller++
-            sjekk()
-        })
-        Actions.Click(bilde6,()=>{
-            check2.show();
-            teller++
-            sjekk()
-        })
-        Actions.Click(bilde8,()=>{
-            check3.show();
-            teller++
-            sjekk()
-        })
-        Actions.Click(bilde9,()=>{
-            check4.show();
-            teller++
-            sjekk()
-        })
     })
-
+    Actions.Click(bilde7, ()=>{
+        check1.show();
+        teller++
+        sjekk()
+    })
+    Actions.Click(bilde6,()=>{
+        check2.show();
+        teller++
+        sjekk()
+    })
+    Actions.Click(bilde8,()=>{
+        check3.show();
+        teller++
+        sjekk()
+    })
+    Actions.Click(bilde9,()=>{
+        check4.show();
+        teller++
+        sjekk()
+    })
 
 
 }
@@ -964,8 +993,10 @@ function sunnyregelMynter () {
     const bilde5 = new Blocks.Image("bilder/skattekiste.png", { x: 200, y: 400, width: 300, height: 350})
     const bilde6 = new Blocks.Image("bilder/mynterbrett.png", { x: 550, y: 460, width: 300, height: 250})
     const bilde7 = new Blocks.Image("bilder/pilTrykk.png", { x: 950, y: 650, width: 50, height: 100})
+    const lyd10 = new Blocks.Sound("lyd/scene10.1.m4a", {loop: false, auto: true});
 
     Actions.Click(bilde7, () => {
+        lyd10.stop()
         GaaTil(valgKarakter);
     })
 
@@ -981,6 +1012,7 @@ function skilpaddeBobble () {
     const bilde5 = new Blocks.Image("bilder/boblerhav3.png", { x: 100, y: 400, width: 400, height: 400})
     const bilde6 = new Blocks.Image("bilder/boblerhav4.png", { x: 100, y: 0, width: 400, height: 400})
     const bilde7 = new Blocks.Image("bilder/pilTrykk.png", { x: 950, y: 650, width: 50, height: 100})
+   
 
 
     Actions.Click(bilde3, () => {
