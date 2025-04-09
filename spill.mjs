@@ -22,8 +22,8 @@ const Start = (maal) => {
 //#endregion
 const breddeIpad = 1080;
 const høydeIpad = 810;
-//Start(strandBaat1);
-Start(danseParty);
+Start(strandBaat1);
+//Start(danseParty);
 
 // Disse scenene er her som eksempler. Du kan ta dem bort eller endre dem. 
 
