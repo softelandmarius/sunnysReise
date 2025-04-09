@@ -522,7 +522,7 @@ function sunnyTvil () {
 }
 function sunnyReglerBeseire () {
     const bakgrunn = new Blocks.Image("bilder/blaa_bakgrunn.jpeg", { x: 0, y: 0, width: 1080, height: 810})
-    const sunny_venstre = new Blocks.Image("bilder/sunny_vesntre.png", { x: 0, y: 0, width: 450, height: 400 })
+    const sunny_venstre = new Blocks.Image("bilder/sunny_venstre.png", { x: 0, y: 0, width: 450, height: 400 })
     const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100});
     Actions.Click(pil, ()=>{
         GaaTil(sunnyBeseire)
