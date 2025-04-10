@@ -1133,7 +1133,7 @@ function tentakulusHistorie () {
     const test = new Actions.CountDown(1, () => {
         const bakgrunnsfarge = new Blocks.Image("bilder/blaa_bakgrunn.jpeg", {x:0, y:0, width:breddeIpad, height:høydeIpad})
         const bilde1 = new Blocks.Image("bilder/tentakulus_uten.png", { x: 0, y: 0, width: breddeIpad, height: høydeIpad})
-        const lyd1 = new Blocks.Sound("lyd/scene scene8.m4a", {loop: false, auto: true})
+        const lyd1 = new Blocks.Sound("lyd/scene8.m4a", {loop: false, auto: true})
         scene2.start()
     }, {onTick: false,auto:true})
 
