@@ -587,7 +587,7 @@ function sunnyReglerBeseire () {
 
     Actions.Click(pil, ()=>{
         lyder.stop();
-        GaaTil(sunnyBeseire)
+        GaaTil(slutt)
     })
 }
 
@@ -632,16 +632,7 @@ function tentakulusSnakker (){
         GaaTil(sunnyReglerBeseire)
     })
 }
-function sunnyBeseire (){
-    const bakgrunn = new Blocks.Image ("bilder/blaa_bakgrunn.jpeg", { x: 0, y:0, width: breddeIpad, height:høydeIpad})
-    const sunny = new Blocks.Image("bilder/sunny_hoyre.png", {x:100, y:30, width:800, height:700})
-    const lyder = new Blocks.SoundQue(["lyd/scene42.1.m4a","lyd/scene42.2.m4a","lyd/scene42.3.m4a"])
-    lyder.start();
-    Actions.Click(sunny, ()=>{
-        lyder.stop();
-        GaaTil(slutt)
-    })
-}
+
 
 const backgroundPos = [
     {x: 300, y: 150 }, //oppe venstre
