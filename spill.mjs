@@ -774,13 +774,14 @@ function strandBaat1 () {
     const bilde1 = new Blocks.Image("bilder/strandBaat1.png", { x: 0, y: 0, width:breddeIpad, height: høydeIpad})
     const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100})
    
-    const lyd1 = new Blocks.Sound("lyd/scene1.mp3", {loop: false, auto: true})
+    const lyd1 = new Blocks.Sound("lyd/scene1.mp3", {loop: false, auto: false})
     //const lyd2 = new Blocks.Sound("lyd/bølgeStrand.mp3", {loop: false, auto: true})
-    const lyd3 = new Blocks.Sound("lyd/maakeSkrik.mp3", {loop: false, auto: true})
-    Actions.Click(pil,()=>{
+    const lyd3 = new Blocks.Sound("lyd/maakeSkrik.mp3", {loop: false, auto: false})
+    Actions.Click(bilde1,()=>{
         lyd1.start();
+        lyd3.start();
     })
-    Actions.Click(bilde1, () => {
+    Actions.Click(pil, () => {
         lyd1.stop();
         //lyd2.stop();
         lyd3.stop();
@@ -795,7 +796,7 @@ function baatHav () {
     //const lyd2 = new Blocks.Sound("lyd/scene2.m4a", {loop: false, auto: true})
     const bilde7 = new Blocks.Image("bilder/pilTrykk.png", { x: 950, y: 650, width: 50, height: 100})
     
-    const lyder = new Blocks.SoundQue(["lyd/roroDinbaat.m4a","lyd/scene2.m4a"])//{loop: false, auto: true})
+    const lyder = new Blocks.SoundQue(["lyd/scene2.m4a","lyd/roroDinbaat.m4a"])//{loop: false, auto: true})
 
     lyder.start();
 
