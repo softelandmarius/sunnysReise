@@ -23,7 +23,7 @@ const Start = (maal) => {
 const breddeIpad = 1080;
 const høydeIpad = 810;
 Start(strandBaat1);
-//Start(danseParty);
+//Start(havetsLyd);
 
 // Disse scenene er her som eksempler. Du kan ta dem bort eller endre dem. 
 
@@ -55,6 +55,7 @@ function rimPaaTang() {
    //new Blocks.Sound
 
     Actions.Click(pil, ()=>{
+        rime.stop();
 
         GaaTil(Velkommen)
 
@@ -68,6 +69,7 @@ function finnToLike() {
     const lyd16 = new Blocks.Sound("lyd/scene16.m4a", {loop: false, auto: true})
 
     Actions.Click(pil, ()=>{
+        lyd16.stop();
         GaaTil(finnToLike2)
         
     })
@@ -212,6 +214,7 @@ function rimMaake() {
     const lyd18 = new Blocks.Sound("lyd/scene18.m4a", {loop: false, auto: true})
 ;
     Actions.Click(pil, ()=>{
+        lyd18.stop();
         GaaTil(Velkommen)
     })
 }
@@ -222,6 +225,7 @@ function fargeleggFisk() {
     const lyd19 = new Blocks.Sound("lyd/scene19.m4a", {loop: false, auto: true})
 ;
     Actions.Click(pil, ()=>{
+        lyd19.stop();
         GaaTil(fargeleggFisk2)
     })
  }
@@ -241,6 +245,7 @@ function fargeleggCora() {
     const lyd21 = new Blocks.Sound("lyd/scene21.m4a", {loop: false, auto: true})
 ;
     Actions.Click(pil, ()=>{
+        lyd21.stop();
         GaaTil(coraRegler)
     })
 }
@@ -261,6 +266,7 @@ function hvilkenFargeBlir () {
     const lyd23 = new Blocks.Sound("lyd/scene23.m4a", {loop: false, auto: true})
  ;
     Actions.Click(pil, ()=>{
+        lyd23.stop();
         GaaTil(hvilkenFarge2)
     })
     
@@ -331,7 +337,32 @@ function havetsLyd () {
     const maake = new Blocks.Image("bilder/makke.jpeg", {x:700, y:60, width:200, height:200})
     const sel = new Blocks.Image("bilder/sel.jpeg", {x:30, y:400, width:200, height:200})
     const bolge = new Blocks.Image("bilder/bolge.jpeg", {x:350, y:400, width:200, height:200})
-    const baat = new Blocks.Image("bilder/motor_baat.jpeg", {x:700, y:400, width:200, height:200});
+    const baat = new Blocks.Image("bilder/motor_baat.jpeg", {x:700, y:400, width:200, height:200})
+    const bolgelyd = new Blocks.Sound("lyd/bolge.mp3", {loop: false, auto: false})
+    const delfinlyd = new Blocks.Sound("lyd/delfin.mp3", {loop: false, auto: false})
+    const baatlyd = new Blocks.Sound("lyd/motor_baat.mp3", {loop: false, auto: false})
+    const hvallyd = new Blocks.Sound("lyd/hval.mp3", {loop: false, auto: false})
+    const maakelyd = new Blocks.Sound("lyd/maake.mp3", {loop: false, auto: false})
+    const sellyd = new Blocks.Sound("lyd/sel.mp3", {loop: false, auto: false})
+
+    Actions.Click(bolge, ()=>{
+        bolgelyd.start();
+    })
+    Actions.Click(baat, ()=>{
+        baatlyd.start();
+    })
+    Actions.Click(delfin, ()=>{
+        delfinlyd.start();
+    })
+    Actions.Click(hval, ()=>{
+        hvallyd.start();
+    })
+    Actions.Click(maake, ()=>{
+        maakelyd.start();
+    })
+    Actions.Click(sel, ()=>{
+        sellyd.start();
+    })
     Actions.Click(pil, ()=>{
         GaaTil(Velkommen)
     })
@@ -343,6 +374,7 @@ function hvorLeverDyrene () {
     const lyd25 = new Blocks.Sound("lyd/scene25.m4a", {loop: false, auto: true})
 ;
     Actions.Click(pil, ()=>{
+        lyd25.stop();
         GaaTil(leverDyrene2)
     })
 
@@ -468,6 +500,7 @@ function hjelpSvomme () {
     const sunny = new Blocks.Image("bilder/sunny_hoyre.png", {x:100, y:450, width:300, height:350})
     const lyd27 = new Blocks.Sound("lyd/scene27.m4a", {loop: false, auto: true});
     Actions.Click(pil, ()=>{
+        lyd27.stop();
         GaaTil(Velkommen)
     })
 }
@@ -477,6 +510,7 @@ function beskjedHjelp () {
     const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100})
     const lyd4 = new Blocks.Sound("lyd/scene4.m4a", {loop: false, auto: true});
     Actions.Click(pil, ()=>{
+        lyd4.stop();
         GaaTil(pusleStart)
     })
 }
@@ -493,6 +527,7 @@ function valgKarakter () {
     const lyd11 = new Blocks.Sound("lyd/scene11.m4a", {loop: false, auto: true});
 
     Actions.Click(pil_hoyre, ()=>{
+        lyd11.stop();
         GaaTil(Velkommen)
     })
 
@@ -519,6 +554,7 @@ function tarDuUtfordring () {
     const nei_valg = new Blocks. Image ("bilder/nei_valg.png", { x:800, y: 550, width:180, height:180})
     const lyd13 = new Blocks.Sound("lyd/scene13.m4a", {loop: false, auto: true});
     Actions.Click(nei_valg, ()=>{
+        lyd13.stop();
         GaaTil(Velkommen)
  })
  Actions.Click(ja_valg, ()=>{
@@ -536,15 +572,21 @@ function sunnyTvil () {
     const sunny_hoyre = new Blocks.Image("bilder/sunny_hoyre.png", { x: 0, y: 0, width: 450, height: 400 })
     const lyd38 = new Blocks.Sound("lyd/scene38.m4a", {loop: false, auto: true});
     Actions.Click(sunny_hoyre, ()=>{
+        lyd38.stop();
         GaaTil(skilpaddeBobble)
     })
 }
 function sunnyReglerBeseire () {
     const bakgrunn = new Blocks.Image("bilder/blaa_bakgrunn.jpeg", { x: 0, y: 0, width: 1080, height: 810})
-    const sunny_venstre = new Blocks.Image("bilder/sunny_venstre.png", { x: 0, y: 0, width: 450, height: 400 })
+    const sunny_venstre = new Blocks.Image("bilder/sunny_venstre.png", { x: 300, y: 30, width: 600, height: 600 })
     const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100})
-    const lyd = new Blocks.Sound("lyd/scene25.m4a", {loop: false, auto: true});
+    //const lyd = new Blocks.Sound("lyd/scene25.m4a", {loop: false, auto: true});
+
+    const lyder = new Blocks.SoundQue(["lyd/scene50.m4a","lyd/scene50.1.m4a"])
+    lyder.start();
+
     Actions.Click(pil, ()=>{
+        lyder.stop();
         GaaTil(sunnyBeseire)
     })
 }
@@ -561,7 +603,7 @@ function slutt () {
     const sjohest_karakter  = new Blocks.Image("bilder/sjohest_karakter.png", { x: 500, y: 15, width: 200, height: 250})
     const sjostejerne_karakter  = new Blocks.Image("bilder/sjostjerne_karakter.png", { x: 800, y: 15, width: 200, height: 250})
     
-    const lyder = new Blocks.SoundQue(["lyd/scene43.1.m4a","lyd/scene43.2.m4a"])
+    const lyder = new Blocks.SoundQue(["lyd/scene43.1.m4a","lyd/scene50.2m4a"])
     lyder.start();
 
     Actions.Click(sunny_hoyre, ()=>{
@@ -576,6 +618,7 @@ function siSaaMangeDuKan (){
     const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100})
     const lyd40 = new Blocks.Sound("lyd/scene40.m4a", {loop: false, auto: true});
     Actions.Click(pil, ()=>{
+        lyd40.stop();
         GaaTil(Velkommen)
     })
     
@@ -585,6 +628,7 @@ function tentakulusSnakker (){
     const tentakulus = new Blocks.Image("bilder/tentakulus_med_mynter.png", {x:100, y:10, width:900, height:700})
     const lyd41 = new Blocks.Sound("lyd/scene41.m4a", {loop: false, auto: true});;
     Actions.Click(tentakulus, ()=>{
+        lyd41.stop();
         GaaTil(sunnyReglerBeseire)
     })
 }
@@ -594,6 +638,7 @@ function sunnyBeseire (){
     const lyder = new Blocks.SoundQue(["lyd/scene42.1.m4a","lyd/scene42.2.m4a","lyd/scene42.3.m4a"])
     lyder.start();
     Actions.Click(sunny, ()=>{
+        lyder.stop();
         GaaTil(slutt)
     })
 }
@@ -635,6 +680,7 @@ function pusleStart (){
    const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100})
    const lyd5 = new Blocks.Sound("lyd/scene5.m4a", {loop: false, auto: true});
    Actions.Click(pil, ()=>{
+    lyd5.stop();
     GaaTil(pusleLive)
    })
     createPuzzle()
@@ -650,6 +696,7 @@ function pusleLive (){
     const sunny = new Blocks.Image("bilder/sunny_hoyre.png", {x:250, y:100, width:500, height:600});
     const lyd6 = new Blocks.Sound("lyd/scene6.m4a", {loop: false, auto: true});
     Actions.Click(sunny, ()=>{
+        lyd6.stop();
         GaaTil(reddeSjorovere)
     })
 }
@@ -743,21 +790,29 @@ function strandBaat1 () {
 function baatHav () {
     const bilde1 = new Blocks.Image("bilder/baatHav.jpg", { x: 0, y: 0, width: breddeIpad, height: høydeIpad})
     //const lyd1 = new Blocks.Sound("lyd/bølgeHav.mp3", {loop: false, auto: true})
-    const lyd2 = new Blocks.Sound("lyd/scene2.m4a", {loop: false, auto: true})
+    //const lyd2 = new Blocks.Sound("lyd/scene2.m4a", {loop: false, auto: true})
+    const bilde7 = new Blocks.Image("bilder/pilTrykk.png", { x: 950, y: 650, width: 50, height: 100})
+    
+    const lyder = new Blocks.SoundQue(["lyd/roroDinBaat.m4a","lyd/scene2.m4a"])//{loop: false, auto: true})
+
+    lyder.start();
+
 
     Actions.Click(bilde1, () => {
-        lyd1.stop();
-        lyd2.stop();
+        lyder.stop();
+
         GaaTil(beskjedHjelp);
     })
-
+Actions.Click(bilde7,()=>{
+    lyder.start();
+})
 }
 
-function mynter3 () {
+function mynter12 () {
     const bilde1 = new Blocks.Image("bilder/blaabakgrunn2.png", { x: 0, y: 0, width: breddeIpad, height: høydeIpad})
     const bilde2 = new Blocks.Image("bilder/pilTrykk.png", { x: 950, y: 650, width: 50, height: 100})
-    const tekst = new Blocks.Text("Gratulerer alle får 3 mynter hver", { style: "tekstVenstre", x: 50, y: 300, width: 1000, height: 150})
-    const lyd1 = new Blocks.Sound("lyd/scene30.m4a", {loop: false, auto: true})
+    const tekst = new Blocks.Text("Gratulerer alle får 1 mynter hver", { style: "tekstVenstre", x: 50, y: 300, width: 1000, height: 150})
+    const lyd1 = new Blocks.Sound("lyd/scene37.m4a", {loop: false, auto: true})
     
 
     Actions.Click(bilde2, () => {
@@ -799,7 +854,7 @@ function mynter1 () {
 function sunnyHai () {
     const hule = new Blocks.Image("bilder/hule2.jpeg", { x: 0, y: 0, width: breddeIpad, height: høydeIpad})
     const bilde3 = new Blocks.Image("bilder/sunny2.png", { x: 650, y: 400, width: 400, height: 400})
-    const lyd1 = new Blocks.Sound("lyd/scene36.m4a", {loop: false, auto: true})
+    const lyd1 = new Blocks.Sound("lyd/femStegTilbake.m4a", {loop: false, auto: true})
 
     Actions.Click(bilde3, () => {
         lyd1.stop();
@@ -940,17 +995,10 @@ function sunnyRegelStjerne () {
     const bilde3 = new Blocks.Image("bilder/grønnStjerne3.png", { x: 200, y: 250, width: 300, height: 350})
     const bilde4 = new Blocks.Image("bilder/sunny.png", { x: 10, y: 15, width: 200, height: 250})
     const bilde5 = new Blocks.Image("bilder/pilTrykk.png", { x: 950, y: 650, width: 50, height: 100})
-    //const lyd1 = new Blocks.Sound("lyd/Scene 10.m4a", {loop: false, auto: true})
-
-    const lyder = new Blocks.SoundQue(["lyd/scene10.m4a", "lyd/scene10.1.m4a"])
-
-    lyder.start();
-
-    
-    
+    const lyd1 = new Blocks.Sound("lyd/Scene9.m4a", {loop: false, auto: true})
 
     Actions.Click(bilde5, () => {
-        lyder.stop();
+        lyd1.stop();
         GaaTil(sunnyregelPose);
     })
 
