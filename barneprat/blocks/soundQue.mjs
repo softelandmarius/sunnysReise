@@ -7,7 +7,7 @@ class SoundQue extends BaseBlock {
         super();
         this.source = source;
         this.audioList = [];
-        for (let s in this.source) {
+        for (let s of this.source) {
             this.audioList.push(new Sound(s, { loop: false, auto: false }));
         }
 
@@ -30,15 +30,17 @@ class SoundQue extends BaseBlock {
         this.index = 0;
         this.audio = this.audioList[this.index].audio;
         this.audio.play();
-        this.audio.onended = this.onAudioEnd;
+        this.audio.onended = (evt) => {this.onAudioEnd(evt)};
+        
     }
 
-    onAudioEnd(e) {
+    onAudioEnd() {
         this.index++;
+        
         if (this.index < this.audioList.length) {
             this.audio = this.audioList[this.index].audio;
             this.audio.play();
-            this.audio.onended = this.onAudioEnd;
+            this.audio.onended = (evt) => {this.onAudioEnd(evt)};
         } else {
 
             if (this.loop) {
