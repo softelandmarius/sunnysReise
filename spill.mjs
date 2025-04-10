@@ -780,7 +780,7 @@ function strandBaat1 () {
 
     Actions.Click(bilde1, () => {
         lyd1.stop();
-        lyd2.stop();
+        //lyd2.stop();
         lyd3.stop();
         GaaTil(baatHav);
         })
