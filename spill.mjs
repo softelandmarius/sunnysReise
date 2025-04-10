@@ -533,7 +533,7 @@ function valgKarakter () {
 
 }
 
-const utfordringliste = [sunnyTvil,siSaaMangeDuKan,rimMaake,rimPaaTang,finnToLike,fargeleggFisk,fargeleggCora,hvilkenFargeBlir,havetsLyd,hvorLeverDyrene,hjelpSvomme,danseParty,dykkerFisk,mynter1,mynter2,mynter3,sunnyHai,hermanKrabbe,dansepartyGrønn,zippiHjelp1];
+const utfordringliste = [sunnyTvil,siSaaMangeDuKan,rimMaake,rimPaaTang,finnToLike,fargeleggFisk,fargeleggCora,hvilkenFargeBlir,havetsLyd,hvorLeverDyrene,hjelpSvomme,danseParty,dykkerFisk,mynter1,mynter2,mynter12,sunnyHai,hermanKrabbe,dansepartyGrønn,zippiHjelp1];
 const brukteUtfordringer =[];
 function resettUtfordringer() {
     if (utfordringliste.length === 0) {
