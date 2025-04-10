@@ -660,10 +660,9 @@ const pusleSpillStart = [
 function snapToBoard (aPiece, positionIndex) {
     const imgwidth = 200;
     const imgheight = 200;
-
-    const piece = new Blocks.Image(aPiece, {x: pusleSpillStart[positionIndex].x, y:pusleSpillStart[positionIndex].y, width: imgwidth, height: imgheight})
     const bakgrunnsbilde = new Blocks.Image("bilder/lyse_blaa.jpeg", {x: backgroundPos[positionIndex].x, y:backgroundPos[positionIndex].y, width: imgwidth, height: imgheight});
-
+    const piece = new Blocks.Image(aPiece, {x: pusleSpillStart[positionIndex].x, y:pusleSpillStart[positionIndex].y, width: imgwidth, height: imgheight})
+    
     Actions.Drag(piece);
     Actions.Snap(bakgrunnsbilde, piece, 10);
 
@@ -773,11 +772,14 @@ function dykkerFisk () {
 
 function strandBaat1 () {
     const bilde1 = new Blocks.Image("bilder/strandBaat1.png", { x: 0, y: 0, width:breddeIpad, height: høydeIpad})
-    
+    const pil = new Blocks.Image("bilder/pil_hoyre.png", {x:950, y:650, width:50, height:100})
+   
     const lyd1 = new Blocks.Sound("lyd/scene1.mp3", {loop: false, auto: true})
     //const lyd2 = new Blocks.Sound("lyd/bølgeStrand.mp3", {loop: false, auto: true})
     const lyd3 = new Blocks.Sound("lyd/maakeSkrik.mp3", {loop: false, auto: true})
-
+    Actions.Click(pil,()=>{
+        lyd1.start();
+    })
     Actions.Click(bilde1, () => {
         lyd1.stop();
         //lyd2.stop();
@@ -793,17 +795,17 @@ function baatHav () {
     //const lyd2 = new Blocks.Sound("lyd/scene2.m4a", {loop: false, auto: true})
     const bilde7 = new Blocks.Image("bilder/pilTrykk.png", { x: 950, y: 650, width: 50, height: 100})
     
-    const lyder = new Blocks.SoundQue(["lyd/roroDinBaat.m4a","lyd/scene2.m4a"])//{loop: false, auto: true})
+    const lyder = new Blocks.SoundQue(["lyd/roroDinbaat.m4a","lyd/scene2.m4a"])//{loop: false, auto: true})
 
     lyder.start();
 
 
-    Actions.Click(bilde1, () => {
+    Actions.Click(bilde7, () => {
         lyder.stop();
 
         GaaTil(beskjedHjelp);
     })
-Actions.Click(bilde7,()=>{
+Actions.Click(bilde1,()=>{
     lyder.start();
 })
 }
